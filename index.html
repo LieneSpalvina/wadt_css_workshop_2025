@@ -21,6 +21,35 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="stylesheet" href="workshop.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1").toggle();
+  });
+});
+
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("p").hide();
+  });
+  $(".btn2").click(function(){
+    $("p").show();
+  });
+});
+$(document).ready(function(){
+  $(".btn3").click(function(){
+    $(".green").animate({left: '250px'});
+  });
+});
+
+$(document).ready(function(){
+  $(".btn4").click(function(){
+    $(".green").animate({right: '250px'});
+  });
+});
+
+</script>
 
 </head>
 
@@ -31,9 +60,22 @@
     </aside>
 
     <h1>What is Sass? Your guide to this top CSS preprocessor</h1>
+<button>Toggle between hide() and show()</button>
+
+
     <p class="byline">By <strong>Tammy Coron</strong> — <time datetime="2020-01-10">January 10, 2020</time></p>
 
+
+<div class="green" style="background:#98bf21;height:10px;width:100px;position:absolute;"></div>
+
+<br>
+
+<button class="btn3">Start Animation</button>
+<button class="btn4">Revert Animation</button>
+
     <p>Discover what Sass is, and learn how to start using it.</p>
+<button class="btn1">Hide</button>
+<button class="btn2">Show</button>
   </header>
 
   <main>
